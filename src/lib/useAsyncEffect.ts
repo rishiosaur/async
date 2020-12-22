@@ -30,11 +30,7 @@ export function useAsyncEffect<T>(
   useEffect(() => {
     setMounted(true);
 
-    Promise.resolve(effect(mounted))
-      .then(setResult)
-      .catch((e) => {
-        throw e; // TODO: ADD CATCH CALL
-      });
+    Promise.resolve(effect(mounted)).then(setResult);
 
     return () => {
       setMounted(false);

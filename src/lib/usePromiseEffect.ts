@@ -1,11 +1,6 @@
 import { useState } from 'react';
 import { useAsyncEffect, AsyncEffect, DependencyList } from './useAsyncEffect';
 
-interface PromiseState {
-  status: string;
-  value: unknown;
-  error: unknown;
-}
 type PromiseEffectState<T> =
   | { status: 'pending'; value: null; error: null }
   | { status: 'fulfilled'; value: T; error: null }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export type DependencyList = readonly any[];
-export type AsyncEffect<T> = (mounted: boolean) => Promise<T> | T;
+export type AsyncEffect<T> = (mounted: boolean) => Promise<T>;
 export type CleanupFunc<T> = (result: T | undefined) => void;
 
 export function useAsyncEffect<T>(
@@ -23,15 +23,17 @@ export function useAsyncEffect<T>(
   const deps = hasCleanup
     ? dependencies?.concat(cleanup) || [cleanup]
     : ((cleanup as unknown) as DependencyList) || [];
+
   const [mounted, setMounted] = useState(false);
   const [result, setResult] = useState<T>();
+
   useEffect(() => {
     setMounted(true);
 
     Promise.resolve(effect(mounted))
       .then(setResult)
       .catch((e) => {
-        throw e;
+        throw e; // TODO: ADD CATCH CALL
       });
 
     return () => {

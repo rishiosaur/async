@@ -1,2 +1,13 @@
 # package.json is formatted by package managers, so we ignore it here
 package.json
+node_modules/
+.next/
+.vercel/
+public/
+
+.gitignore
+.eslintrc
+yarn.lock
+.prettierignore
+.env.local
+LICENSE

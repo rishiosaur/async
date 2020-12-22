@@ -10,5 +10,6 @@ public/
 yarn.lock
 .prettierignore
 .env.local
+build/
 LICENSE
 yarn-error.log

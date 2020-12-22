@@ -47,7 +47,8 @@
     "node": ">=10"
   },
   "dependencies": {
-    "eslint-config-airbnb": "^18.2.1"
+    "ava": "^3.12.1",
+    "react": "^17.0.1"
   },
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
@@ -56,15 +57,15 @@
     "@types/react": "^16.9.55",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
-    "ava": "^3.12.1",
     "codecov": "^3.5.0",
     "cspell": "^4.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-wesbos": "^1.0.0",
     "eslint-plugin-html": "^6.1.0",
-    "eslint-plugin-import": "2.20.0",
+    "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "7.18.0",

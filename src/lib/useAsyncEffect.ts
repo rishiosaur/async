@@ -20,8 +20,11 @@ export function useAsyncEffect<T>(
 ): void {
   // Has cleanup function
   const hasCleanup = typeof cleanup === 'function';
+  // eslint-disable-next-line no-nested-ternary
   const deps = hasCleanup
-    ? dependencies?.concat(cleanup) || [cleanup]
+    ? dependencies
+      ? dependencies.concat(cleanup)
+      : [cleanup]
     : ((cleanup as unknown) as DependencyList) || [];
 
   const [mounted, setMounted] = useState(false);

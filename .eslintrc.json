@@ -20,6 +20,7 @@
     "import/newline-after-import": 0,
     "no-shadow": 0, // This is just for enums until https://github.com/typescript-eslint/typescript-eslint/issues/325 is fixed,
     "camelcase": 0,
+    "import/no-cycle": 0,
     "react/jsx-filename-extension": 0,
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": 0,

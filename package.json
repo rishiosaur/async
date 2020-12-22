@@ -1,6 +1,6 @@
 {
   "name": "@rishiosaur/async",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "A tiny asynchronous effect for React.",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -43,7 +43,7 @@
     "lint:check": "eslint \"./**/*.{js,ts,tsx,jsx}\" --quiet",
     "check": "yarn run format:check && yarn run lint:check",
     "check:fix": "yarn run format && yarn run lint",
-    "package": "yarn run build && yarn run version && git push --follow-tags origin main && npm publish"
+    "package": "yarn run build && yarn run version && git push --follow-tags origin main && npm publish --access=public"
   },
   "engines": {
     "node": ">=10"

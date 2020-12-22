@@ -7,6 +7,7 @@
   "module": "build/module/index.js",
   "repository": "https://github.com/rishiosaur/async",
   "license": "MIT",
+  "private": false,
   "keywords": [],
   "scripts": {
     "build": "run-p build:*",

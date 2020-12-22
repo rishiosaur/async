@@ -1,5 +1,5 @@
 {
-  "name": "async",
+  "name": "@rishiosaur/async",
   "version": "1.0.0",
   "description": "A tiny asynchronous effect for React.",
   "main": "build/main/index.js",

@@ -42,7 +42,8 @@
     "lint": "eslint \"./**/*.{js,ts,tsx,jsx}\" --quiet --fix",
     "lint:check": "eslint \"./**/*.{js,ts,tsx,jsx}\" --quiet",
     "check": "yarn run format:check && yarn run lint:check",
-    "check:fix": "yarn run format && yarn run lint"
+    "check:fix": "yarn run format && yarn run lint",
+    "package": "yarn run build && yarn run version && git push --follow-tags origin main && npm publish"
   },
   "engines": {
     "node": ">=10"

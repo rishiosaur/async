@@ -1,33 +1,43 @@
 {
-  "root": true,
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": { "project": "./tsconfig.json" },
-  "env": { "es6": true },
-  "ignorePatterns": ["node_modules", "build", "coverage"],
-  "plugins": ["import", "eslint-comments"],
-  "extends": [
-    "eslint:recommended",
-    "plugin:eslint-comments/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript",
-        "prettier",
-    "prettier/@typescript-eslint"
-  ],
-  "globals": { "BigInt": true, "console": true, "WebAssembly": true },
-  "rules": {
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "eslint-comments/disable-enable-pair": [
-      "error",
-      { "allowWholeFile": true }
-    ],
-    "eslint-comments/no-unused-disable": "error",
-    "import/order": [
-      "error",
-      { "newlines-between": "always", "alphabetize": { "order": "asc" } }
-    ],
-    "sort-imports": [
-      "error",
-      { "ignoreDeclarationSort": true, "ignoreCase": true }
-    ]
-  }
+	"extends": [
+		"wesbos",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"globals": {
+		"chrome": true
+	},
+	"rules": {
+		"no-restricted-globals": 0,
+		"no-plusplus": 0,
+		"@typescript-eslint/no-explicit-any": 0,
+		"@typescript-eslint/explicit-function-return-type": 0,
+		"@typescript-eslint/explicit-module-boundary-types": 0,
+		"@typescript-eslint/no-var-requires": 0,
+		"@typescript-eslint/member-delimiter-style": 0,
+		"prettier/prettier": 0,
+		"class-methods-use-this": 0,
+		"import/newline-after-import": 0,
+		"no-shadow": 0, // This is just for enums until https://github.com/typescript-eslint/typescript-eslint/issues/325 is fixed,
+		"camelcase": 0,
+		"import/no-cycle": 0,
+		"react/jsx-filename-extension": 0,
+		"react/prop-types": 0,
+		"react/jsx-props-no-spreading": 0,
+		"import/no-named-default": 0,
+		"no-use-before-define": 0,
+		"import/no-unresolved": 0
+	},
+	"settings": {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts"]
+		},
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".ts"]
+			}
+		}
+	},
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint/eslint-plugin"]
 }
